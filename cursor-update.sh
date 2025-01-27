@@ -26,6 +26,5 @@ $TEMPDIR/appimagetool-x86_64.AppImage squashfs-root/ $BINDIR/cursor
 chmod +x $BINDIR/cursor
 
 # Cleaning Up
-rm $TEMPDIR/appimagetool-x86_64.AppImage
-rm -rf squashfs-root/
+rm -rf $TEMPDIR
 popd
