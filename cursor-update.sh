@@ -4,6 +4,7 @@ BINDIR=$HOME/bin
 TEMPDIR=/tmp/cursor
 APPIMAGE_URL="https://downloader.cursor.sh/linux/appImage/x64"
 
+mkdir -p $TEMPDIR
 pushd $TEMPDIR
 
 wget -O $TEMPDIR/cursor.AppImage.original $APPIMAGE_URL
