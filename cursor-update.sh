@@ -18,14 +18,15 @@ rm $TEMPDIR/cursor.AppImage.original
 TARGET_FILE="squashfs-root/resources/app/out/main.js"
 sed -i 's/,minHeight/,frame:false,minHeight/g' "$TARGET_FILE"
 
-# Download appimagetool
+# Download latest appimagetool
 wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage -O $TEMPDIR/appimagetool-x86_64.AppImage
 chmod +x $TEMPDIR/appimagetool-x86_64.AppImage
 
 # Repackage the AppImage using appimagetool
+rm -f $BINDIR/cursor
 $TEMPDIR/appimagetool-x86_64.AppImage squashfs-root/ $BINDIR/cursor
 chmod +x $BINDIR/cursor
 
+popd
 # Cleaning Up
 rm -rf $TEMPDIR
-popd
