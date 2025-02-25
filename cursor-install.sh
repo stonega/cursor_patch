@@ -3,7 +3,7 @@
 BINDIR=$HOME/bin
 TEMPDIR=/tmp/cursor
 APPIMAGE_URL="https://downloader.cursor.sh/linux/appImage/x64"
-mkdir -p $BINDIR $HOME/.icons $HOME/.local/share/applications
+mkdir -p $TEMPDIR $BINDIR $HOME/.icons $HOME/.local/share/applications
 
 pushd $TEMPDIR
 
