@@ -18,7 +18,7 @@ A maintenance script for enhancing Cursor editor on Linux systems. Removes windo
 Run the following command in your terminal:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mxsteini/cursor_patch/main/cursor-install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/stonega/cursor_patch/main/cursor-install.sh | bash
 ```
 
 ### Manual Install
@@ -26,7 +26,7 @@ curl -fsSL https://raw.githubusercontent.com/mxsteini/cursor_patch/main/cursor-i
 1. Download the script:
 
 ```bash
-wget https://raw.githubusercontent.com/mxsteini/cursor_patch/main/cursor-install.sh
+wget https://raw.githubusercontent.com/stonega/cursor_patch/main/cursor-install.sh
 ```
 
 2. Run the script:
