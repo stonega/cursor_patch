@@ -15,7 +15,7 @@ $TEMPDIR/cursor.AppImage.original --appimage-extract
 rm $TEMPDIR/cursor.AppImage.original
 
 # Fix it by replacing all occurrences of ",minHeight" with ",frame:false,minHeight"
-TARGET_FILE="squashfs-root/resources/app/out/main.js"
+TARGET_FILE="squashfs-root/usr/share/cursor/resources/app/out/main.js"
 sed -i 's/,minHeight/,frame:false,minHeight/g' "$TARGET_FILE"
 
 # Download latest appimagetool
