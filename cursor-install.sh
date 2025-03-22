@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-BINDIR=$HOME/bin
+BINDIR=$HOME/Applications
 TEMPDIR=/tmp/cursor
 APPIMAGE_URL="https://downloads.cursor.com/production/b6fb41b5f36bda05cab7109606e7404a65d1ff32/linux/x64/Cursor-0.47.9-x86_64.AppImage"
 mkdir -p $TEMPDIR $BINDIR $HOME/.icons $HOME/.local/share/applications
@@ -12,9 +12,9 @@ chmod +x $TEMPDIR/cursor.AppImage.original
 
 # Extract the AppImage
 $TEMPDIR/cursor.AppImage.original --appimage-extract
-cp $TEMPDIR/squashfs-root/cursor.png $HOME/.icons/
+cp $TEMPDIR/squashfs-root/code.png $HOME/.icons/
 
-wget https://raw.githubusercontent.com/mxsteini/cursor_patch/main/cursor-update.sh -O $BINDIR/cursor-update.sh
+wget https://raw.githubusercontent.com/stonega/cursor_patch/main/cursor-update.sh -O $BINDIR/cursor-update.sh
 
 cat <<EOF > $HOME/.local/share/applications/cursor.desktop
 [Desktop Entry]

@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-BINDIR=$HOME/bin
+BINDIR=$HOME/Applications
 TEMPDIR=/tmp/cursor
 APPIMAGE_URL="https://downloader.cursor.sh/linux/appImage/x64"
 
