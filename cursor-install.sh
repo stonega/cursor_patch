@@ -37,5 +37,5 @@ EOF
 chmod +x $BINDIR/cursor-update.sh
 
 $BINDIR/cursor-update.sh
-rm $BINDER/cursor-updaate.sh
+rm $BINDER/cursor-update.sh
 popd
