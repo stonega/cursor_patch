@@ -2,7 +2,10 @@
 
 BINDIR=$HOME/Applications
 TEMPDIR=/tmp/cursor
-APPIMAGE_URL="https://downloads.cursor.com/production/ec408037b24566b11e6132c58bbe6ad27046eb91/linux/x64/Cursor-0.49.4-x86_64.AppImage"
+
+# Get the latest AppImage URL
+APPIMAGE_URL=$(curl -s 'https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=stable' | jq -r '.downloadUrl')
+
 mkdir -p $TEMPDIR $BINDIR $HOME/.icons $HOME/.local/share/applications
 
 pushd $TEMPDIR
@@ -37,5 +40,5 @@ EOF
 chmod +x $BINDIR/cursor-update.sh
 
 $BINDIR/cursor-update.sh
-rm $BINDER/cursor-update.sh
+rm $BINDIR/cursor-update.sh
 popd

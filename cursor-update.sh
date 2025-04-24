@@ -2,7 +2,7 @@
 
 BINDIR=$HOME/Applications
 TEMPDIR=/tmp/cursor
-APPIMAGE_URL="https://downloads.cursor.com/production/ec408037b24566b11e6132c58bbe6ad27046eb91/linux/x64/Cursor-0.49.4-x86_64.AppImage"
+APPIMAGE_URL=$(curl -s 'https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=stable' | jq -r '.downloadUrl')
 
 mkdir -p $TEMPDIR
 pushd $TEMPDIR
